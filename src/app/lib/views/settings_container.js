@@ -239,6 +239,7 @@
                         AdvSettings.set('lastTab', App.currentview);
                     }
                 /* falls through */
+                case 'translateTitle':
                 case 'watchedCovers':
                 case 'theme':
                     value = $('option:selected', field).val();
@@ -261,7 +262,9 @@
                 case 'continueSeedingOnStart':
                 case 'vpnEnabled':
                 case 'coversShowRating':
+                case 'translatePosters':
                 case 'translateSynopsis':
+                case 'translateEpisodes':
                 case 'showAdvancedSettings':
                 case 'alwaysOnTop':
                 case 'traktSyncOnStart':
