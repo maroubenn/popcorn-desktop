@@ -44,18 +44,21 @@ jobs:
       - name: Build App [macOS]
         if: matrix.os == 'macOS-latest'
         run: |
+          npm install
           yarn
           yarn gulp dist
 
       - name: Build App [ubuntu]
         if: matrix.os == 'ubuntu-latest'
         run: |
+          npm install
           yarn
           yarn gulp dist --platforms=linux32,linux64
 
       - name: Build App [windows]
         if: matrix.os == 'windows-latest'
         run: |
+          npm install
           yarn
           yarn gulp dist --platforms=win32
           yarn gulp dist --platforms=win64
